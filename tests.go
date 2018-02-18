@@ -16,11 +16,11 @@
 // с номерами с первого по четвертый. 
 
 // Sample input:                      Sample output:
-// 3 0.5                              4
+// 3 0.5                              0.9375
+// 2 0.5                              4
 // 2 0.5                              3
-// 2 0.5                              2
-// 3 0.5                              1
-// 9 0.9
+// 3 0.5                              2
+// 9 0.9                              1
 // 10
 
 package main
@@ -100,6 +100,7 @@ func main() {
         }
     }
     
+    fmt.Println(1 - math.Pow(2, res[index][n]))
     for i := n; i > 0; i-- {
         if last[index][i] != -1 {
             fmt.Println(last[index][i] + 1)
